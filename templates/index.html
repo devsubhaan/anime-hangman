@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Shares</th>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+                {% if stock.shares > 0 %}
+                    <tr>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ "${:,.2f}".format(stock.price) }}</td>
+                        <td>{{ "${:,.2f}".format(stock.price * stock.shares) }}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+            <tr>
+                <td colspan="2"></td>
+                <td><strong>Cash</strong></td>
+                <td>{{ cash }}</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td><strong>TOTAL</strong></td>
+                <td>{{ total }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
