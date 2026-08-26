@@ -41,10 +41,13 @@ Converts the parameters into a dictionary. This is needed since to grab data lik
 Converts capitalized words into dashes. Both of the APIs show a description of the anime but it can contain lots of info about it. 
 
 This is an example of what a hidden description looks like (it makes it harder for it to give the answer):
-![Hidden Description Example](image.png)
+
+<img width="780" height="432" alt="image" src="https://github.com/user-attachments/assets/08201c70-ccb5-4d66-afe2-1084bd9ed0c6" />
 
 Now this is what it looks like when not hidden—it reveals a lot and sometimes some anime descriptions have the title in the name:
-![Unhidden Description Example](image-1.png)
+
+<img width="798" height="656" alt="image" src="https://github.com/user-attachments/assets/e3ca4aa1-dece-446a-bb4d-85dbe16d8c1e" />
+
 
 This is all to make it harder for the answer to get spoiled.
 
@@ -63,3 +66,23 @@ Just closes the database connection. This is called when the program terminates 
 Prevents going back to previous pages. If you log out then go back a page, it would make you log back in automatically which has security vulnerabilities.
 
 *(The rest are the Flask pages which are self-explanatory).*
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up and run the project locally on your machine.
+
+### Prerequisites
+* **Python 3.x** installed on your system.
+* **Git** installed on your system.
+
+### Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/YOUR-USERNAME/anime-hangman.git](https://github.com/YOUR-USERNAME/anime-hangman.git)
+   cd anime-hangman
+
+---
+
