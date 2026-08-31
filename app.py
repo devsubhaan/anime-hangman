@@ -137,10 +137,20 @@ def loadAnime() -> list:
 
 
 def getDb() -> sqlite3.Connection:
-    """Get a database connection, creating the scores table if it doesn't exist."""
+    """Get a database connection, creating the scores/login table if it doesn't exist."""
+
     if 'db' not in g:
         g.db = sqlite3.connect(DATABASE)
         g.db.row_factory = sqlite3.Row
+        g.db.execute(
+            """
+            CREATE TABLE IF NOT EXISTS users (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                username TEXT NOT NULL UNIQUE,
+                hash TEXT NOT NULL
+            )
+            """
+        )
         g.db.execute(
             """
             CREATE TABLE IF NOT EXISTS hangman_scores (
