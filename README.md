@@ -13,7 +13,41 @@
 * Score increases when you successfully guess an anime.
 
 ---
+## 🎮 Gameplay
+* Register with the register screen if there is no account (Passwords are hashed)
+<img width="1650" height="629" alt="image" src="https://github.com/user-attachments/assets/7db6a1e9-6d5b-41af-b5bd-8392342af66c" />
 
+* Login with the login page using the same details. Any wrong details give errors
+<img width="1656" height="610" alt="image" src="https://github.com/user-attachments/assets/fad5aadb-2a67-4650-ad10-c7f552d3497f" />
+
+* Error screen shows with a changeable GIF, error text and error code. Happens for stuff flask-related rather than the actual game
+<img width="1663" height="594" alt="image" src="https://github.com/user-attachments/assets/eac022db-0f96-43be-85df-cac18f630f82" />
+
+* In the actual game spaces are shown if the character is not (a-z or A-Z) so you do not have to guess symbols as part of the answer
+* Guesses are also shown which fills up for every answer.
+* Score increments for every correct answer and it is stored in the database
+<img width="468" height="316" alt="image" src="https://github.com/user-attachments/assets/bd58bfdb-556e-4a5e-9cd3-1a237239c35d" />
+
+* Description hints are given for the third guess and image hints are given on the fifth (whether correct or wrong).
+* Here is an example of the description hint
+<img width="1413" height="560" alt="image" src="https://github.com/user-attachments/assets/1dce5963-9dd9-496a-96a1-ad9ce8af8e17" />
+
+* Here is an example of the image hint   
+<img width="430" height="468" alt="image" src="https://github.com/user-attachments/assets/f24855b8-63ee-4c1b-9160-5c83c4971a78" />
+
+* Guessing the correct title increments score and reveals the image/description
+<img width="1469" height="692" alt="image" src="https://github.com/user-attachments/assets/0bedb587-016f-4a58-825f-0c68aba4fecd" />
+
+* Incorrectly guessing an anime does not change your score, you can simply redo the guess
+
+---
+## 💻 Future Plans
+* Dark mode option - makes it easier on all of our eyes (especially at night)
+* Leader boards - so everyone can compete
+* Daily anime to guess
+* Better score system (based on how few wrong answers you gave)
+
+---
 ## 🏗️ Structure
 * There is a `templates` folder which holds every single page of the application: The login screen, register screen and the hangman screen.
 * The `layout.html` file is used to add the same theme to every page, it uses Jinja.
